@@ -1,25 +1,13 @@
 <?php
 
-print_r($_REQUEST);
+$palabras = array('Sol', 'Luna', 'Cielo', "Luz", "Estrellas", "Lluvia");
 
-$palabras = array('Sol', 'Luna', 'Cielo');
-
-if ($_REQUEST["palabra0"] == $palabras[0]) {
-  echo "La palabra es correcta";
-} else {
-  echo "La palabra es incorrecta";
-}
-
-if ($_REQUEST["palabra1"] == $palabras[1]) {
-  echo "La palabra es correcta";
-} else {
-  echo "La palabra es incorrecta";
-}
-
-if ($_REQUEST["palabra2"] == $palabras[2]) {
-  echo "La palabra es correcta";
-} else {
-  echo "La palabra es incorrecta";
+for ($i=0; $i < count($palabras); $i++) {
+  if ($_REQUEST["palabra".$i] == $palabras[$i]) {
+    echo "La palabra es correcta <br />";
+  } else {
+    echo "La palabra es incorrecta, la palabra correcta es $palabras[$i] <br />";
+  }
 }
 
 ?>
