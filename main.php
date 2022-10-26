@@ -1,19 +1,14 @@
 <?php
 
-$palabras = array('Sol', 'Luna', 'Cielo');
-$palabrasDesordenadas = array();
+$palabras = array('Sol', 'Luna', 'Cielo', "Luz", "Estrellas", "Lluvia");
 
-for ($i = 0; $i < 3; $i++) {
-  $palabrasDesordenadas[$i] = str_shuffle($palabras[$i]);
+
+$form = "<form action='analisis.php'>";
+$button = "<button type='submit'>Enviar</button>";
+$formClosing = "</form>";
+
+for ($i = 0; $i < count($palabras); $i++) {
+  $form .= "La Palabra: " . str_shuffle($palabras[$i]) . " " . "<input type='text' name='palabra$i'></br>";
 }
 
-print_r($palabrasDesordenadas);
-
-echo "
-<form action='analisis.php'>
-  <input type='text' name='palabra0'>
-  <input type='text' name='palabra1'>
-  <input type='text' name='palabra2'>
-  <button type='submit'>Enviar</button>
-</form>
-";
+echo $form.$button.$formClosing;
