@@ -9,6 +9,9 @@
 *.gif
 *.webm
 
+/docs
+*.pdf
+
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos,visualstudiocode,git,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos,visualstudiocode,git,node
 
